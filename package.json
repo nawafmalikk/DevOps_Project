@@ -1,28 +1,29 @@
 {
   "name": "term-project-f24",
   "version": "1.0.0",
+  "description": "DevOps Project",
   "scripts": {
     "test": "jest",
     "lint:html": "npx htmlhint '**/*.html'",
     "lint:css": "npx stylelint '**/*.css' --config stylelint-config-standard",
-    "build": "npx cpy ./src/*.html dist/src && npx cpy ./styles/*.css dist/styles"
+    "build": "npx cpy './src/*.html' './dist/src' --parents && npx cpy './styles/*.css' './dist/styles' --parents"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nawafmalikk/DevOps_Project.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nawaf Malik",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nawafmalikk/DevOps_Project/issues"
   },
-  "devDependencies": {
-    "htmlhint": "^1.0.0",
-    "stylelint": "^14.0.0",
-    "stylelint-config-standard": "^25.0.0",
-    "jest": "^29.0.0"
-  },
   "homepage": "https://github.com/nawafmalikk/DevOps_Project#readme",
-  "description": ""
+  "devDependencies": {
+    "cpy-cli": "^3.1.1",
+    "htmlhint": "^1.0.0",
+    "stylelint": "^15.0.0",
+    "stylelint-config-standard": "^30.0.0",
+    "jest": "^29.0.0"
+  }
 }
