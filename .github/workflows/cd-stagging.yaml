@@ -26,7 +26,10 @@ jobs:
 
       - name: Install dependencies (if needed)
         run: npm install
-
+        
+      - name: Give execute permissions to build.sh
+        run: chmod +x build.sh
+        
       - name: Run build.sh script
         run: ./build.sh
 
