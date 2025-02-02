@@ -11,7 +11,7 @@ jobs:
     environment: staging-env  # Specify the staging environment
 
     permissions:
-      contents: write  # Required to deploy to GitHub Pages
+      contents: write  # Required to the deploy to GitHub Pages
       pages: write     # Required to deploy to GitHub Pages
       id-token: write  # Required for OIDC (if using advanced authentication)
 
