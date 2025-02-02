@@ -1,0 +1,38 @@
+name: CD Staging
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: staging-env  # Specify the staging environment
+
+    permissions:
+      contents: write  # Required to deploy to GitHub Pages
+      pages: write     # Required to deploy to GitHub Pages
+      id-token: write  # Required for OIDC (if using advanced authentication)
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js (if needed)
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies (if needed)
+        run: npm install
+
+      - name: Run build.sh script
+        run: ./build.sh
+
+      - name: Deploy to Staging Environment
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build  # Replace with the folder created by build.sh
+          destination_dir: staging  # Optional: Specify a subdirectory for staging

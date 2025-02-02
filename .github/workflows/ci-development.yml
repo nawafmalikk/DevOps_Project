@@ -1,0 +1,48 @@
+name: PR Validation
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  html-lint:
+    name: Lint HTML Files
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          npm install --save-dev htmlhint  
+
+      - name: Lint HTML files with HTMLHint
+        run: npx htmlhint "**/*.html" 
+
+  css-lint:
+    name: Lint CSS Files
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          npm install --save-dev stylelint stylelint-config-standard
+
+  
+      - name: Lint CSS files with Stylelint and auto-fix
+        run: npx stylelint "**/*.css" --fix 
