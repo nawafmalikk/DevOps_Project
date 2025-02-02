@@ -2,6 +2,7 @@
   "extends": "stylelint-config-standard",
   "rules": {
     "declaration-block-no-duplicate-properties": true,
+    "declaration-block-single-line-max-declarations": 10,
     "no-duplicate-selectors": true,
     "property-case": "lower",
     "value-keyword-case": "lower",
