@@ -58,5 +58,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages #deploy to github
         uses: actions/deploy-pages@v4
