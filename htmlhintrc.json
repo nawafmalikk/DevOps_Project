@@ -1,0 +1,18 @@
+{
+  "tagname-lowercase": true,
+  "attr-lowercase": true,
+  "alt-require": true,
+  "id-unique": true,
+  "tag-pair": true,
+  "attr-no-duplication": true,         
+  "doctype-first": true,              
+  "head-script-disabled": true,        
+  "title-require": true,              
+  "indent-width":4,       
+  "linebreak-style":"unix",   
+  "id-class-ad-disabled": true,    
+  "img-req-alt": true,      
+  "img-req-src": true      
+
+
+}
