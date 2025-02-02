@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Khuzaima121/devops-project.git"
+    "url": "git+https://github.com/nawafmalikk/DevOps_Project.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Khuzaima121/devops-project/issues"
+    "url": "https://github.com/nawafmalikk/DevOps_Project/issues"
   },
   "devDependencies": {
     "htmlhint": "^1.0.0",
@@ -23,6 +23,6 @@
     "stylelint-config-standard": "^25.0.0",
     "jest": "^29.0.0"
   },
-  "homepage": "https://github.com/Khuzaima121/devops-project#readme",
+  "homepage": "https://github.com/nawafmalikk/DevOps_Project#readme",
   "description": ""
 }
