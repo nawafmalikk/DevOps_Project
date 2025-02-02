@@ -34,5 +34,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # Replace with the folder created by build.sh
+          publish_dir: ./build  # Replace with the the folder created by build.sh
           destination_dir: production  # Optional: Specify a subdirectory for production
