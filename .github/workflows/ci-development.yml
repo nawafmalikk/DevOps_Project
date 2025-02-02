@@ -45,4 +45,4 @@ jobs:
 
   
       - name: Lint CSS files with Stylelint and auto-fix
-        run: npx stylelint "**/*.css" --fix 
+        run: npx stylelint "**/*.css" --fix # auto fix
